@@ -30,7 +30,7 @@ import pandas as pd
 
 
 # read the customers data into the dataframe
-connection_str = "DRIVER={ODBC Driver 13 for SQL Server}; SERVER=localhost\\SQLEXPRESS; DATABASE=Upsert_test1; Trusted_Connection=yes"
+connection_str = "DRIVER={ODBC Driver 13 for SQL Server}; SERVER=localhost\\SQLEXPRESS; DATABASE=YOUR_DATABASE_NAME; Trusted_Connection=yes"
 conn = pyodbc.connect(connection_str) 
 customers_frame = pd.read_sql("select * from customers", conn)
 conn.close()
